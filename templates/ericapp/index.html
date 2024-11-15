@@ -1,0 +1,408 @@
+{% extends 'ericapp/base.html' %}
+{% block content %}
+{% load static %}
+  <section id="home" class="home">
+      <h1>in eric tech ltd,</h1>
+      <h2>we specialize in training the next generation of repair professionals</h2>
+  </section>
+  
+   
+    <div class="pt-5 pb-5" style="background-color: #f2f2f2;">
+    <div class="container">
+        <div class="row">
+            <div class="section-head col-sm-12" id="service">
+                <h1>Our Services</h1>
+                <p>Eric Tech Ltd offers a wide range of professional services in electronics and IT, as well as skill-building opportunities to ensure a bright future for our community.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_one"><i class="fa fa-laptop"></i></span>
+                    <h6>Buy & Sell Electronics and IT Equipment</h6>
+                    <p>We buy and sell high-quality electronics and IT equipment, providing our clients with reliable technology solutions for their personal and professional needs.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_two"><i class="fa fa-school"></i></span>
+                    <h6>Electronics and Computer Technology TVET School (ECT TVET)</h6>
+                    <p>Our TVET school offers comprehensive training programs in electronics and computer technology, empowering students with practical skills for a brighter future.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_three"><i class="fa fa-tools"></i></span>
+                    <h6>Electronic Repair Services</h6>
+                    <p>We provide expert repair services for various electronic devices, ensuring our clients’ devices are restored to optimal performance.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_one"><i class="fa fa-desktop"></i></span>
+                    <h6>Computer Maintenance and Repair</h6>
+                    <p>Our team offers maintenance and repair services for computers, helping businesses and individuals keep their systems running efficiently.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_two"><i class="fa fa-briefcase"></i></span>
+                    <h6>Internship Opportunities</h6>
+                    <p>We offer internships for individuals looking to gain hands-on experience in electronics, IT equipment, and computer technology fields.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_three"><i class="fa fa-tv"></i></span>
+                    <h6>Marketing on BTN TV</h6>
+                    <p>Advertise your business with us! Through our TUBIMENYE program on BTN TV, we can help increase your business visibility and reach a larger audience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Section 1: Image Gallery -->
+        <div style="margin: 20px 0; padding: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); border-radius: 12px; background-color: #f8f9fa;">
+    <h2 style="margin: 0 0 15px; color: #333; text-align: center; font-size: 2rem; font-weight: bold;">Our Stunning Gallery</h2>
+    <div class="gallery-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        
+        <!-- Image Wrapper -->
+        <div class="gallery-item">
+            <img src="{% static 'images/pic10.png' %}" alt="Image 1">
+            <div class="overlay">Workshop</div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="{% static 'images/image1.jpg' %}" alt="Image 2">
+            <div class="overlay">Workshop</div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="{% static 'images/pic15.png' %}" alt="Image 3">
+            <div class="overlay">Workshop</div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="{% static 'images/image15.jpg' %}" alt="Image 4">
+            <div class="overlay">Workshop</div>
+        </div>
+        
+    </div>
+</div>
+
+<style>
+    /* Gallery Container */
+    .gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /* Image Wrapper */
+    .gallery-item {
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    /* Overlay Effect */
+    .gallery-item .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        font-size: 1.1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Hover Effects */
+    .gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .gallery-item:hover .overlay {
+        opacity: 1;
+    }
+</style>
+
+
+        <!-- Section 2: Services or Details -->
+        <div style="margin: 20px 0; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; background-color: #f8f9fa;">
+            <h2 style="margin: 0 0 15px; color: #333;">Our Core Values</h2>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                
+                <!-- Service Item 1 -->
+                <div>
+                <div style="display: flex; align-items: center; padding: 15px; border: 11px solid #ddd; border-radius: 8px; background-color: #fff;">
+                    <img src="{% static 'images/image3.jpg' %}" alt="Service 1" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; object-fit: cover;">
+                    <p style="font-size: 1.5rem; margin: 0; color: #555;"><strong>Service Excellence</strong> At Eric Tech, we are committed to providing the highest quality service to our customers.</p>
+                
+                    <img src="{% static 'images/image3.jpg' %}" alt="Service 1" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; object-fit: cover;">
+                    <p style=" font-size: 1.5rem; margin: 0; color: #555;"><strong>Hardworking</strong> The foundation of Eric Tech is built on dedication and hard work.</p>
+                
+                </div>
+                 <div style="display: flex; align-items: center; padding: 15px; border: 11px solid #ddd; border-radius: 8px; background-color: #fff;">
+                    <img src="{% static 'images/image3.jpg' %}" alt="Service 1" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; object-fit: cover;">
+                    <p style="font-size: 1.5rem; margin: 0; color: #555;"><strong>Innovation</strong> At Eric Tech, we’re always pushing the boundaries of what’s possible with technology. From the latest electronics to cutting-edge IT solutions.</p>
+                
+                    <img src="{% static 'images/image3.jpg' %}" alt="Service 1" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; object-fit: cover;">
+                    <p style="font-size: 1.5rem; margin: 0; color: #555;"><strong>Reliability</strong> When you choose Eric Tech, you’re choosing a company that you can trust for high-quality solutions and ongoing customer support.</p>
+                
+                </div>
+                 <div style="display: flex; align-items: center; padding: 15px; border: 11px solid #ddd; border-radius: 8px; background-color: #fff;">
+                    <img src="{% static 'images/image3.jpg' %}" alt="Service 1" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; object-fit: cover;">
+                    <p style="font-size: 1.5rem; margin: 0; color: #555;"><strong> Affordability</strong> Eric Tech is proud to offer competitive pricing without compromising on quality. Whether you’re buying electronics</p>
+                
+                    <img src="{% static 'images/image3.jpg' %}" alt="Service 1" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; object-fit: cover;">
+                    <p style="font-size: 1.5rem; margin: 0; color: #555;"><strong>Integrity</strong> Building trust through transparency, accountability, and professionalism.</p>
+                
+                </div>
+                </div>
+                <!-- Service Item 2 -->
+               
+                
+
+            </div>
+        </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+
+<div class="communicate">
+    <p>Join Eric Tech Ltd’s internship program and play a role in advancing Rwanda’s tech industry. Whether you’re interested in repairs, sales, or IT, we’re here to help you succeed in your professional journey.</p>
+<a href="{% url 'ericapp:contact' %}" style="text-decoration: none; background-color: #007bff; color: white; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; transition: background-color 0.3s ease, transform 0.3s ease;">Contact Us Now</a>
+</div>
+
+<div class="clients mt-100">
+    <div class="container">
+        <div class="section-header">
+            <p>
+               Discover a world of top-quality electronics and IT equipment at Eric Tech Ltd!
+            </p>
+        </div>
+        <div class="owl-carousel clients-carousel">
+<img src="{% static './images/device1.jpg' %}" alt="Client Logo" class="client-image">
+<img src="{% static './images/device2.jpg' %}" alt="Client Logo" class="client-image">
+<img src="{% static './images/device3.jpg' %}" alt="Client Logo" class="client-image">
+<img src="{% static './images/device4.png' %}" alt="Client Logo" class="client-image">
+<img src="{% static './images/device5.jpg' %}" alt="Client Logo" class="client-image">
+<img src="{% static './images/device6.jpg' %}" alt="Client Logo" class="client-image">
+<img src="{% static './images/device9.jpg' %}" alt="Client Logo" class="client-image">
+<img src="{% static './images/device10.jpg' %}" alt="Client Logo" class="client-image">
+
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+  <style>
+.client-image {
+    width: 100%;
+    max-width: 200px;
+    margin: 0px 30px; /* Space between images horizontally */
+    padding: 20px; /* Adds padding inside the image container */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-radius: 0px; /* Rounded corners */
+    background-color: #fff; /* White background for each image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    overflow: hidden; /* Ensures the image is clipped within the rounded corners */
+}
+
+.client-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+    background-color: #f8f9fa; /* Light gray background when hovered */
+}
+
+.client-image img {
+    width: 100%; /* Ensures the image stretches to fit the container */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    transition: transform 0.3s ease;
+}
+
+.client-image:hover img {
+    transform: scale(1.05); /* Zoom effect on image when hovered */
+}
+
+.client-image:hover {
+    transform: scale(2.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+</style>
+</div>
+
+
+<a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+<script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+<script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+
+<div class="tubimenye-program mt-100">
+    <div class="container" >
+        <div class="section-header" style="text-align: center;">
+            <h2 style="margin-top: -15rem;">Feature Program: TUBIMENYE on BTN TV</h2>
+            <p style="font-size: 2rem;">
+                Tune in to learn essential skills and build a brighter future!
+            </p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="program-image">
+                    <img src="{% static './images/tubimenye.jpg' %}" alt="TUBIMENYE BTN TV Program" style="width: 100%; border-radius: 8px;">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="program-details">
+                    <h3>About the Program</h3>
+                    <p style="font-size: 1.5rem; line-height: 1.6;">
+                        TUBIMENYE is an inspiring BTN TV program dedicated to helping our community gain hands-on skills in electronics repair and technology. Hosted by experts, each episode dives into valuable insights on repairing, maintaining, and understanding modern electronics.
+                    </p>
+                    <p style="font-size: 1.5rem; line-height: 1.6;">
+                        Whether you’re a tech enthusiast or simply curious, this program offers a unique opportunity to learn skills that can lead to future job opportunities. Catch us every week on BTN TV to stay updated and connected with the tech community!
+                    </p>
+                    <p style="font-weight: bold; font-size: 1.5rem;">
+                        Airs: Every Saturday, 3:00 PM on BTN TV
+                    </p>
+                    <p style="font-weight: bold; font-size: 1.5rem;">
+                        Stay tuned and be part of our journey to empower and educate!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="advertisement-video-section pt-5 pb-5" style="background-color: #f1f1f1;">
+    <div class="container">
+        <div class="section-header text-center mb-4">
+            <h1 style="font-weight: bold; color: #333; font-size: 2.5rem;">Watch Our Video</h1>
+            <p style="font-size: 1.2rem; color: #555;">
+                Discover more about Eric Tech Ltd and our mission through this short video.
+            </p>
+        </div>
+
+        <div class="video-wrapper text-center">
+            <!-- Video Thumbnail or Embedded Video -->
+            <video id="promoVideo" controls style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+                <source src="{% static 'images/erictech.mp4' %}" type="video/mp4">
+                <!-- Optional: Add more sources for different formats -->
+                Your browser does not support the video tag.
+            </video>
+            <!-- Caption for Video -->
+            <p style="font-size: 1rem; color: #777; margin-top: 10px;">
+                Click play to learn more about our innovative projects and programs!
+            </p>
+        </div>
+    </div>
+</div>
+         
+     <div class="innovation-creativity-section pt-5 pb-5" style="background-color: #e8f1f8;">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h1 style="font-weight: bold; color: #2c3e50; font-size: 2.8rem;">Innovation & Creativity</h1>
+            <p style="font-size: 1.7rem; color: #4a4a4a; line-height: 1.6;">
+                At Eric Tech Ltd and ECT TVET, we believe in nurturing innovation and fostering creativity to build a brighter future for Rwanda's tech community.
+            </p>
+        </div>
+
+        <div class="row">
+            <!-- Innovation Programs Section -->
+            <div class="col-lg-6 mb-4">
+                <div class="innovation-programs p-4" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);">
+                    <h2 style="color: #2980b9; font-size: 2.2rem; font-weight: bold;">Our Innovation Programs</h2>
+                    <p style="font-size: 1.5rem; color: #5a5a5a; line-height: 1.8;">
+                        Eric Tech Ltd is committed to advancing technology through creative solutions and innovative projects. Our programs are designed to encourage critical thinking, collaboration, and real-world problem-solving, preparing you to tackle the challenges of tomorrow.
+                    </p>
+                    <ul style="list-style-type: disc; margin-left: 20px; color: #333; font-size: 1.5rem;">
+                        <li>Hands-on Electronics Repair Workshops</li>
+                        <li>Tech Innovation Challenges and Hackathons</li>
+                        <li>Product Development and Prototype Testing</li>
+                        <li>Industry Partnerships and Collaborations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ECT TVET School Section -->
+            <div class="col-lg-6 mb-4">
+                <div class="tvet-program p-4" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);">
+                    <h2 style="color: #2980b9; font-size: 2.2rem; font-weight: bold;">ECT TVET: Skills for a Bright Future</h2>
+                    <p style="font-size: 1.5rem; color: #5a5a5a; line-height: 1.8;">
+                        ECT TVET School offers a creative and empowering learning environment. Our courses and training programs emphasize hands-on learning, encouraging students to explore their potential and turn ideas into action.
+                    </p>
+                    <ul style="list-style-type: disc; margin-left: 20px; color: #333; font-size: 1.5rem;">
+                        <li>Comprehensive Electronics and IT Training</li>
+                        <li>Project-Based Learning and Practical Labs</li>
+                        <li>Career-Focused Skills for Immediate Employment</li>
+                        <li>Networking Opportunities with Industry Experts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Creativity in Action Section -->
+        <div class="creativity-action text-center mt-5">
+            <h2 style="color: #2980b9; font-size: 2.2rem; font-weight: bold;">Creativity in Action</h2>
+            <p style="font-size: 1.7rem; color: #4a4a4a; line-height: 1.8;">
+                At Eric Tech Ltd and ECT TVET, we provide a platform for aspiring tech professionals to innovate and push boundaries. Join us in our journey to empower Rwanda’s next generation of creators and innovators.
+            </p>
+            <a href="#contact" class="btn btn-primary mt-3" style="font-weight: bold; padding: 12px 24px; font-size: 1.2rem; background-color: #2980b9; border: none; border-radius: 5px;">Contact Us to Learn More</a>
+        </div>
+    </div>
+</div>
+
+{% if messages %}
+    <div class="alert-container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" style="font-size: 1.5rem; font-weight: bold;">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+<section id="contact" class="contact">
+    <h1 class="heading">Contact Us</h1>
+</section>
+<div class="contact-in">
+    <div class="contact-map">
+        <iframe src="https://www.google.com/maps/place/KN+20+Ave,+Kigali/@-1.9582778,30.0515842,17z/data=!3m1!4b1!4m6!3m5!1s0x19dca5cca28709c5:0x766f3424bac88c24!8m2!3d-1.9582778!4d30.0541591!16s%2Fg%2F12xqps4t2?entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="contact-form">
+        <form action="{% url 'ericapp:contact' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
+            <input type="email" name="email" placeholder="Email" class="contact-form-email" required>
+            <textarea placeholder="Your Message" name="message" class="contact-form-txtarea" required></textarea>
+            <input type="submit" value="Submit" name="submit" class="contact-form-btn">
+        </form>
+    </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'ericapp/base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+
+/* Header */
+header {
+    background: #0057b8;
+    color: #0057b8;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.4rem; /* Increased font size */
+    font-weight: 300;
+}
+</style>
+<header>
+    <h1>Eric</h1>
+    <p>Innovating Rwanda, Inspiring the World</p>
+</header>
+<section id="about" class="about" style="background: linear-gradient(135deg, rgba(44, 62, 80, 0.2) 25%, rgba(189, 195, 199, 0.2) 25%, rgba(189, 195, 199, 0.2) 50%, rgba(44, 62, 80, 0.2) 50%, rgba(44, 62, 80, 0.2) 75%, rgba(189, 195, 199, 0.2) 75%); background-size: 100px 100px;">
+    <h1 class="heading">About Us</h1>
+    
+    <!-- Additional About Us content -->
+    <div class="row">
+        <div class="content">
+            <h3>Welcome to Eric Tech Limited</h3>
+            <p>Based in the heart of Kigali, Rwanda, Eric Tech Limited is dedicated to enhancing the tech industry by offering top-quality electronic and IT equipment, expert-led training programs, and pathways for aspiring tech professionals.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="content">
+            <h3>Our Mission</h3>
+            <p>Our mission is to empower individuals and organizations with the tools, knowledge, and expertise needed to succeed in today’s rapidly evolving tech landscape. We aim to be a catalyst for Rwanda’s tech growth, impacting our industry locally and globally.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="content">
+            <h3>Our Vision</h3>
+            <p>To be the leading provider of innovative tech solutions in Rwanda, driving digital transformation and fostering a skilled, tech-savvy community that contributes to the global tech ecosystem.</p>
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="content">
+        <h3>Core Values</h3>
+        <ul style="padding-left: 0; list-style-position: inside;">
+            <li style="font-size: 1.5rem; padding-left: 1rem;"><strong>Service Excellence:</strong> we are committed to providing the highest quality service to our customers.</li>
+            <li style="font-size: 1.5rem; padding-left: 1rem;"><strong>Innovation:</strong> we’re always pushing the boundaries of what’s possible with technology. From the latest electronics to cutting-edge IT solutions.</li>
+            <li style="font-size: 1.5rem; padding-left: 1rem;"><strong>Affordability:</strong> Eric Tech is proud to offer competitive pricing without compromising on quality.</li>
+            <li style="font-size: 1.5rem; padding-left: 1rem;"><strong>Hardworking:</strong> The foundation of Eric Tech is built on dedication and hard work.</li>
+            <li style="font-size: 1.5rem; padding-left: 1rem;"><strong>Reliability:</strong> When you choose Eric Tech, you’re choosing a company that you can trust for high-quality solutions and ongoing customer support.</li>
+            <li style="font-size: 1.5rem; padding-left: 1rem;"><strong>Integrity:</strong> Building trust through transparency, accountability, and professionalism.</li>
+        </ul>
+    </div>
+</div>
+
+
+    <div class="row">
+        <div class="content">
+            <h3>Get In Touch</h3>
+            <p>Whether you need reliable tech equipment or seek training opportunities, Eric Tech Limited is here to support you every step of the way.</p>
+            <div class="social-media">
+                <a href="https://facebook.com/erictech" target="_blank">Facebook</a> |
+                <a href="https://twitter.com/erictech" target="_blank">Twitter</a> |
+                <a href="https://instagram.com/erictech" target="_blank">Instagram</a> |
+                <a href="https://linkedin.com/company/erictech" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

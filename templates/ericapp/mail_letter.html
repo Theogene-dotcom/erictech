@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Newsletter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2,h3 {
+            color: #0073e6;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            background-color: #0073e6;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3>Eric tech marketing and Campaign</h3>
+    <!-- base.html or the template where you want to show messages -->
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
+    <form method="POST" action="{% url 'ericapp:mail_letter' %}">
+        {% csrf_token %}
+        
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="title" placeholder="Enter subject here" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Enter your message here" required></textarea>
+        
+        <button type="submit" class="button">Send to All Subscribers</button>
+    </form>
+</div>
+
+</body>
+</html>

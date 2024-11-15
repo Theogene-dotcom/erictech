@@ -1,0 +1,253 @@
+{% extends 'ericapp/base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: #0057b8;
+    color: #0057b8;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.4rem; /* Increased font size */
+    font-weight: 300;
+}
+
+/* Services Section */
+#services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    padding: 10rem; /* Increased padding for better spacing */
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.service h2 {
+    font-size: 2rem; /* Increased font size */
+    color: #0057b8;
+    margin-bottom: 0.5rem;
+}
+
+.service p {
+    font-size: 1.2rem; /* Increased font size */
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 2.6;
+}
+
+.service ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1rem; /* Increased font size for list items */
+}
+
+.service ul li {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 1.8rem; /* Slightly increased padding */
+    margin-top: 1rem;
+    background: #0057b8;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem; /* Increased font size */
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #003f89;
+}
+
+/* Why Choose Section */
+#why-choose {
+    text-align: center;
+    background: #eef3fa;
+    padding: 2.5rem 1rem; /* Increased padding */
+}
+
+#why-choose h2 {
+    font-size: 2.2rem; /* Increased font size */
+    color: #0057b8;
+    margin-bottom: 0.5rem;
+}
+
+#why-choose p {
+    font-size: 1.3rem; /* Increased font size */
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+#why-choose .cta-button {
+    padding: 1rem 2.5rem; /* Increased padding for emphasis */
+    font-size: 1.2rem; /* Increased font size */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+footer p {
+    font-size: 1.1rem; /* Increased font size */
+    margin-bottom: 0.5rem;
+}
+
+footer .social-links a {
+    color: #0057b8;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: #ffa500;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    #services {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .service {
+        flex: 1;
+        margin: 1rem;
+    }
+}
+</style>
+
+<header>
+    <h1>Eric</h1>
+    <p>Innovating Rwanda, Inspiring the World</p>
+</header>
+
+<div class="pt-5 pb-5" style="background-color: #f2f2f2;">
+    <div class="container">
+        <div class="row">
+            <div class="section-head col-sm-12" id="service">
+                <h1>Our Services</h1>
+                <p>Eric Tech Ltd offers a wide range of professional services in electronics and IT, as well as skill-building opportunities to ensure a bright future for our community.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_one"><i class="fa fa-laptop"></i></span>
+                    <h6>Buy & Sell Electronics and IT Equipment</h6>
+                    <p>We buy and sell high-quality electronics and IT equipment, providing our clients with reliable technology solutions for their personal and professional needs.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_two"><i class="fa fa-school"></i></span>
+                    <h6>Electronics and Computer Technology TVET School (ECT TVET)</h6>
+                    <p>Our TVET school offers comprehensive training programs in electronics and computer technology, empowering students with practical skills for a brighter future.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_three"><i class="fa fa-tools"></i></span>
+                    <h6>Electronic Repair Services</h6>
+                    <p>We provide expert repair services for various electronic devices, ensuring our clients’ devices are restored to optimal performance.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_one"><i class="fa fa-desktop"></i></span>
+                    <h6>Computer Maintenance and Repair</h6>
+                    <p>Our team offers maintenance and repair services for computers, helping businesses and individuals keep their systems running efficiently.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_two"><i class="fa fa-briefcase"></i></span>
+                    <h6>Internship Opportunities</h6>
+                    <p>We offer internships for individuals looking to gain hands-on experience in electronics, IT equipment, and computer technology fields.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature_box_col_three"><i class="fa fa-tv"></i></span>
+                    <h6>Marketing on BTN TV</h6>
+                    <p>Advertise your business with us! Through our TUBIMENYE program on BTN TV, we can help increase your business visibility and reach a larger audience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section id="why-choose">
+    <h2>Why Choose Eric Tech?</h2>
+    <p>Quality products, affordable pricing, comprehensive training, and extensive industry experience.</p>
+    <a href="/" class="cta-button">Discover More</a>
+</section>
+
+<section style="background-color: #007bff; color: #ffffff; padding: 50px 0; text-align: center;">
+    <div style="max-width: 1200px; margin: auto; padding: 20px;">
+        <h1 style="font-size: 3rem; font-weight: bold; margin-bottom: 20px;">Welcome to Eric Tech Ltd</h1>
+        <p style="font-size: 1.5rem; line-height: 1.7; margin-bottom: 40px;">
+            Your trusted partner in electronics, IT solutions, and skills development for a brighter future.
+            Discover our services, from buying & selling electronics to hands-on training and technical support.
+        </p>
+        <a href="#services" style="text-decoration: none; background-color: #ffffff; color: #007bff; padding: 15px 30px; font-size: 1.2rem; font-weight: bold; border-radius: 5px;">
+            Explore Our Services
+        </a>
+    </div>
+</section>
+<section style="background-color: #007bff; color: #ffffff; position: fixed; bottom: 0; left: 0; width: 100%; padding: 20px 0; text-align: center; box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);">
+    <div style="max-width: 1200px; margin: auto; padding: 20px;">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 10px;">Limited Time Offer!</h2>
+        <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 20px;">
+            Get a special discount on registering in the Electronic and Computer Technology (ECT) TVET school training that will start next month. Don't miss out!
+        </p>
+        <a href="{% url 'ericapp:contact' %}" style="text-decoration: none; background-color: #ffffff; color: #007bff; padding: 12px 30px; font-size: 1.2rem; font-weight: bold; border-radius: 5px;">
+            Contact Us now
+        </a>
+    </div>
+</section>
+
+{% endblock %}

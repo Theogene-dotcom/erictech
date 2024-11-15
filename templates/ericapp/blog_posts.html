@@ -1,0 +1,67 @@
+{% extends 'ericapp/base.html' %}
+{% block content %}
+{% load static %}
+<style>
+
+/* Header */
+header {
+    background: #0057b8;
+    color: #0057b8;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.4rem; /* Increased font size */
+    font-weight: 300;
+}
+</style>
+<header>
+    <h1>Eric</h1>
+    <p>Innovating Rwanda, Inspiring the World</p>
+</header>
+<div class="container mt-5">
+    <h1 class="text-center">Our Blog Posts</h1>
+    
+    <div class="row">
+        {% for post in page_obj %}
+        <div class="col-md-4 mb-4">
+            <div class="card" style="border: 1px solid #ddd; border-radius: 10px; overflow: hidden;">
+                {% if post.image %}
+                    <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.title }}" style="height: 200px; object-fit: cover;">
+                {% endif %}
+                <div class="card-body" style="padding: 20px;">
+                    <h5 class="card-title" style="font-size: 1.25rem; font-weight: bold;">{{ post.title }}</h5>
+                    <p class="card-text" style="color: #555; font-size: 1rem;">{{ post.content|truncatewords:30 }}</p>
+                    <a href="{% url 'ericapp:blog_post_detail' post.id %}" class="btn btn-primary" style="border-radius: 5px;">Read More</a>
+                </div>
+                <div class="card-footer text-muted" style="font-size: 0.85rem; padding: 10px; background-color: #f8f9fa;">
+                    Published on {{ post.published_date|date:"F d, Y" }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination-container text-center mt-4">
+        <span class="d-inline-block" style="font-size: 1rem;">
+            {% if page_obj.has_previous %}
+                <a href="?page=1" class="btn btn-secondary">First</a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-secondary">Previous</a>
+            {% endif %}
+            <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="btn btn-secondary">Next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-secondary">Last</a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+
+{% endblock %}

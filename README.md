@@ -1,2 +1,2 @@
-# erictech
-eric tech ltd company website
+# portfolio
+this is base portfolio

@@ -1,0 +1,75 @@
+{% extends 'ericapp/base.html' %}
+{% block content %}
+<style>
+
+/* Header */
+header {
+    background: #0057b8;
+    color: #0057b8;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.4rem; /* Increased font size */
+    font-weight: 300;
+}
+</style>
+<header>
+    <h1>Eric</h1>
+    <p>Innovating Rwanda, Inspiring the World</p>
+</header>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <!-- Blog Post Card -->
+            <div class="card" style="border: 1px solid #ddd; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); margin-bottom: 30px;">
+                <!-- Blog Post Image -->
+                <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.title }}" style="object-fit: cover; height: 400px; width: 100%; border-bottom: 5px solid #f0f0f0;">
+
+                <!-- Card Body -->
+                <div class="card-body" style="padding: 30px;">
+                    <!-- Title -->
+                    <h1 class="card-title" style="font-size: 2.75rem; font-weight: 700; color: #333; margin-bottom: 20px;">
+                        {{ post.title }}
+                    </h1>
+                    
+                    <!-- Published Date -->
+                    <p class="text-muted" style="font-size: 1.1rem; font-weight: 400; color: #777; margin-bottom: 20px;">
+                        Published on {{ post.published_date|date:"F d, Y" }}
+                    </p>
+                    
+                    <!-- Blog Content -->
+                    <div class="card-text" style="font-size: 1.2rem; color: #555; line-height: 1.8; margin-bottom: 20px;">
+                        {{ post.content }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments-section">
+                <h3>Comments</h3>
+                {% for comment in comments %}
+                    <div class="comment" style="border-bottom: 1px solid #ddd; margin-bottom: 20px; padding-bottom: 15px;">
+                        <p><strong>{{ comment.name }}</strong> <span class="text-muted" style="font-size: 0.9rem;">on {{ comment.created_at|date:"F d, Y" }}</span></p>
+                        <p>{{ comment.content }}</p>
+                    </div>
+                {% endfor %}
+
+                <!-- Comment Form -->
+                <h4>Leave a Comment</h4>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Submit Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

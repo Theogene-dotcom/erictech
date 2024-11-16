@@ -1,8 +1,8 @@
 {% extends 'ericapp/base.html' %}
 {% block content %}
 {% load static %}
-<style>
 
+<style>
 /* Header */
 header {
     background: #0057b8;
@@ -12,19 +12,21 @@ header {
 }
 
 header h1 {
-    font-size: 3rem; /* Increased font size */
+    font-size: 3rem;
     margin-bottom: 0.5rem;
 }
 
 header p {
-    font-size: 1.4rem; /* Increased font size */
+    font-size: 1.4rem;
     font-weight: 300;
 }
 </style>
+
 <header>
     <h1>Eric</h1>
     <p>Innovating Rwanda, Inspiring the World</p>
 </header>
+
 <div class="container mt-5">
     <h1 class="text-center">Our Blog Posts</h1>
     
@@ -36,11 +38,24 @@ header p {
                     <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.title }}" style="height: 200px; object-fit: cover;">
                 {% endif %}
                 <div class="card-body" style="padding: 20px;">
-                    <h5 class="card-title" style="font-size: 1.25rem; font-weight: bold;">{{ post.title }}</h5>
-                    <p class="card-text" style="color: #555; font-size: 1rem;">{{ post.content|truncatewords:30 }}</p>
+                    <h5 class="card-title" style="font-size: 1.7rem; font-weight: bold;">{{ post.title }}</h5>
+                    
+                    <!-- Use truncatewords_html and safe to display truncated HTML content -->
+<p class="card-text post-content" style="font-size: 1.5rem !important;">
+    {{ post.content|truncatewords_html:30|safe }}
+</p>
+<style>
+.post-content {
+    font-size: 1.5rem !important;
+}
+.card-text {
+    font-size: 1.5rem !important;
+}
+
+</style>                    
                     <a href="{% url 'ericapp:blog_post_detail' post.id %}" class="btn btn-primary" style="border-radius: 5px;">Read More</a>
                 </div>
-                <div class="card-footer text-muted" style="font-size: 0.85rem; padding: 10px; background-color: #f8f9fa;">
+                <div class="card-footer text-muted" style="font-size: 1.2rem; padding: 10px; background-color: #f8f9fa;">
                     Published on {{ post.published_date|date:"F d, Y" }}
                 </div>
             </div>

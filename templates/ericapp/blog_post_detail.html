@@ -67,6 +67,7 @@ header p {
                 <!-- Comment Form -->
                 <h4>Leave a Comment</h4>
                 <form method="POST">
+                    
                     {% csrf_token %}
                     {{ form|crispy }}
                     <button type="submit" class="btn btn-primary">Add Comment</button>
@@ -147,7 +148,9 @@ header p {
                 <!-- Comment Form -->
                 <h4>Leave a Comment</h4>
                 <form method="POST">
+                    
                     {% csrf_token %}
+                    
                     {{ form|crispy }}
                     <button type="submit" class="btn btn-primary">Submit Comment</button>
                 </form>

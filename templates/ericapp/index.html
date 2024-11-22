@@ -397,6 +397,7 @@
     <div class="contact-form">
         <form action="{% url 'ericapp:contact' %}" method="POST">
             {% csrf_token %}
+          
             <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
             <input type="email" name="email" placeholder="Email" class="contact-form-email" required>
             <textarea placeholder="Your Message" name="message" class="contact-form-txtarea" required></textarea>

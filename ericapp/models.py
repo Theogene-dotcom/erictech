@@ -12,7 +12,7 @@ class Contact(models.Model):
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=200)
-    content = content = CKEditor5Field(config_name='extends', null=True, blank=True)
+    content = CKEditor5Field(config_name='extends', null=True, blank=True)
     image = models.ImageField(upload_to='blog_images/', null=True, blank=True)
     published_date = models.DateTimeField(auto_now_add=True)
 

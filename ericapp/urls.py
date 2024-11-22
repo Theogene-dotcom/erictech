@@ -16,7 +16,5 @@ urlpatterns = [
     path('blog/', views.blog_posts, name='blog_posts'),
     path('post/<int:pk>/', views.blog_post_detail, name='blog_post_detail'),
     path('subscribe/', views.subscribe, name='subscribe'),
-    path('marketing/', views.mail_letter, name='mail_letter')
-
-
+    path('marketing/', views.mail_letter, name='mail_letter'),
 ]

@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap4',
     'django_ckeditor_5',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -151,90 +151,30 @@ CKEDITOR_5_UPLOAD_PATH = "uploads/"
 
 # Custom Admin Settings
 JAZZMIN_SETTINGS = {
-    "site_title": "isoko.rw",
-    "site_header": "Better Choice for U",
-    "site_brand": "isoko ",
+    "site_title": "Eric tech ltd",
+    "site_header": "ECT",
+    "site_brand": "Eric tech rwanda ",
     # "site_icon": "images/favicon.ico",
     # "site_logo": "images/logos/logo.jpg",
-    "welcome_sign": "Welcome To isoko.rw",
-    "copyright": "isoko.rw",
+    "welcome_sign": "Welcome To Eric tech ltd",
+    "copyright": "Eric tech ltd",
     "user_avatar": "images/photos/logo.jpg",
     "show_sidebar": True,
     "navigation_expanded": True,
-    "order_with_respect_to": [
-        "store",
-        "store.product",
-        "store.cartorder",
-        "store.cartorderitem",
-        "store.cart",
-        "store.category",
-        "store.brand",
-        "store.productfaq",
-        "store.review",
-        "vendor.Coupon",
-        "vendor.DeliveryCouriers",
-        "userauths",
-        "userauths.user",
-        "userauths.profile",
-        "donations",
-        "blog",
-        'newsfeed',
-        "contacts",
-        "addon",
-    ],
     "icons": {
         "admin.LogEntry": "fas fa-file",
 
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",
 
-        "userauths.User": "fas fa-user",
-        "userauths.Profile":"fas fa-address-card",
-
-        "donations.Donation": "fas fa-hand-holding-usd",
-        "donations.Payment": "fas fa-credit-card",
-
-        "newsfeed.Newsletter": "fas fa-envelope",
-        "newsfeed.SubscribedUser": "fas fa-at",
-
-        "newsfeed.SubscribedUser": "fas fa-at",
-
-        "contacts.Inquiry": "fas fa-phone",
-        "addon.BasicAddon": "fas fa-cog",
-
-        "store.Product": "fas fa-th",
-        "store.CartOrder":"fas fa-shopping-cart",
-        "store.Cart":"fas fa-cart-plus",
-        "store.CartOrderItem":"fas fa-shopping-basket",
-        "store.Brand":"fas fa-check-circle",
-        "store.productfaq":"fas fa-question",
-        "store.Review":"fas fa-star fa-beat",
-        "store.Category":"fas fa-tag",
-        "store.Tag":"fas fa-tag",
-        "store.Notification":"fas fa-bell",
-        
-        "customer.Address":"fas fa-location-arrow",
-        "customer.Wishlist":"fas fa-heart",
-
-        "vendor.DeliveryCouriers":"fas fa-truck",
-        "vendor.Coupon":"fas fa-percentage",
-        "vendor.Vendor":"fas fa-store",
-        "vendor.Notification":"fas fa-bell",
-        "vendor.PayoutTracker":"fas fa-wallet",
-        "vendor.ChatMessage":"fas fa-envelope",
-
-        "addons.BecomeAVendor":"fas fa-user-plus",
-        "addons.AboutUS":"fas fa-users",
-        "addons.Company":"fas fa-university",
-        "addons.BasicAddon":"fas fa-cog",
     },
     "default_icon_parents": "fas fa-chevron-circle-right",
     "default_icon_children": "fas fa-arrow-circle-right",
     "related_modal_active": False,
-    
+
     "custom_js": None,
     "show_ui_builder": True,
-    
+
     "changeform_format": "horizontal_tabs",
     "changeform_format_overrides": {
         "auth.user": "collapsible",

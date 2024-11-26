@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-3&8v^%v-efws#+@7=dlq3^pm6g651pfug#pdvw3255nc0$44dg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['erictech-production.up.railway.app']
+ALLOWED_HOSTS = ['erictech-production.up.railway.app','www.erictech-production.up.railway.app'] 
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://erictech-production.up.railway.app',
+    'https://www.erictech-production.up.railway.app',
+]
 
 
 # Application definition
@@ -351,8 +356,8 @@ CKEDITOR_5_CONFIGS = {
     },
 }
 
-CSRF_COOKIE_DOMAIN = ".erictech-production.up.railway.app"  # set the domain for your site
-CSRF_COOKIE_SECURE = True  # if you're using HTTPS
-CSRF_TRUSTED_ORIGINS = ".erictech-production.up.railway.app"
+# CSRF_COOKIE_DOMAIN = ".erictech-production.up.railway.app"  # set the domain for your site
+# CSRF_COOKIE_SECURE = True  # if you're using HTTPS
+# CSRF_TRUSTED_ORIGINS = ".erictech-production.up.railway.app"
 
 #updated

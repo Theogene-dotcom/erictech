@@ -379,4 +379,4 @@ CKEDITOR_5_CONFIGS = {
 # CSRF_COOKIE_SECURE = True  # if you're using HTTPS
 # CSRF_TRUSTED_ORIGINS = ".erictech-production.up.railway.app"
 
-#updated
+#updatedd

@@ -98,9 +98,6 @@ if ENVIRONMENT == "production":
             'PASSWORD': env('PASSWORD'),
             'HOST': env('HOST'),
             'PORT': env('PORT'),
-            'OPTIONS': {
-                'sslmode': 'require',  # Ensures SSL is used
-            },
         }
     }
 else:

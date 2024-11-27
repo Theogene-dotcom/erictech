@@ -86,36 +86,36 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-ENVIRONMENT = env("ENVIRONMENT", default="development")
-if ENVIRONMENT == "production":
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'railway',
-            'USER': 'postgres',
-            'PASSWORD': 'wzVPcYoGZRpOMnhuQckNlampvIrKilJi',
-            'HOST': 'postgres.railway.internal',
-            'PORT': '5432',
-        }
+# ENVIRONMENT = env("ENVIRONMENT", default="development")
+# if ENVIRONMENT == "production":
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'wzVPcYoGZRpOMnhuQckNlampvIrKilJi',
+        'HOST': 'postgres.railway.internal',
+        'PORT': '5432',
     }
-    # Cloudinary settings for media files in production
-    CLOUDINARY_STORAGE = {
-        'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME'),
-        'API_KEY': env('CLOUDINARY_API_KEY'),
-        'API_SECRET': env('CLOUDINARY_API_SECRET'),
-    }
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+}
+# Cloudinary settings for media files in production
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': env('CLOUDINARY_API_KEY'),
+    'API_SECRET': env('CLOUDINARY_API_SECRET'),
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-    # Static files settings for production (can be adjusted if using a CDN or similar)
-    STATIC_URL = '/static/'
-    STATIC_ROOT = BASE_DIR / 'staticfiles'
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+# Static files settings for production (can be adjusted if using a CDN or similar)
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
 
 
 # Password validation

@@ -91,11 +91,11 @@ if ENVIRONMENT == "production":
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': env('NAME'),
-            'USER': env('USER'),
-            'PASSWORD': env('PASSWORD'),
-            'HOST': env('HOST'),
-            'PORT': env('PORT'),
+            'NAME': 'railway',
+            'USER': 'postgres',
+            'PASSWORD': 'wzVPcYoGZRpOMnhuQckNlampvIrKilJi',
+            'HOST': 'postgres.railway.internal',
+            'PORT': '5432',
         }
     }
     # Cloudinary settings for media files in production
@@ -385,4 +385,14 @@ CKEDITOR_5_CONFIGS = {
 # CSRF_COOKIE_SECURE = True  # if you're using HTTPS
 # CSRF_TRUSTED_ORIGINS = ".erictech-production.up.railway.app"
 
-#updated
+# if ENVIRONMENT == "production":
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': env('NAME'),
+#             'USER': env('USER'),
+#             'PASSWORD': env('PASSWORD'),
+#             'HOST': env('HOST'),
+#             'PORT': env('PORT'),
+#         }
+#     }

@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = 'django-insecure-3&8v^%v-efws#+@7=dlq3^pm6g651pfug#pdvw3255nc0$44dg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG',default=True)
@@ -98,6 +98,18 @@ if ENVIRONMENT == "production":
             'PORT': env('PORT'),
         }
     }
+    # Cloudinary settings for media files in production
+    CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME'),
+        'API_KEY': env('CLOUDINARY_API_KEY'),
+        'API_SECRET': env('CLOUDINARY_API_SECRET'),
+    }
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+    # Static files settings for production (can be adjusted if using a CDN or similar)
+    STATIC_URL = '/static/'
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
+    DEBUG = False
 else:
     DATABASES = {
         'default': {

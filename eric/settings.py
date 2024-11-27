@@ -109,7 +109,6 @@ if ENVIRONMENT == "production":
     # Static files settings for production (can be adjusted if using a CDN or similar)
     STATIC_URL = '/static/'
     STATIC_ROOT = BASE_DIR / 'staticfiles'
-    DEBUG = False
 else:
     DATABASES = {
         'default': {

@@ -96,9 +96,9 @@ DATABASES = {
 }
 # Cloudinary settings for media files in production
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dgbbjnvp7',
-    'API_KEY': '153942431273933',
-    'API_SECRET': 'uFzjy6KXyGvnEJ7dCx83GWmpUW4',
+    'cloud_name': 'dgbbjnvp7',
+    'api_key': '153942431273933',
+    'api_secret': 'uFzjy6KXyGvnEJ7dCx83GWmpUW4',
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 

@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 from pathlib import Path
 from environ import Env
-
+import dj_database_url
 env = Env()
 Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['erictech-production.up.railway.app','www.erictech-production.u
 CSRF_TRUSTED_ORIGINS = [
     'https://erictech-production.up.railway.app',
     'https://www.erictech-production.up.railway.app',
+    'https://kigalibusiness.com',
 ]
 
 
@@ -89,20 +90,15 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # ENVIRONMENT = env("ENVIRONMENT", default="development")
 # if ENVIRONMENT == "production":
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'wzVPcYoGZRpOMnhuQckNlampvIrKilJi',
-        'HOST': 'postgres.railway.internal',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.parse(
+        "postgresql://postgres:wzVPcYoGZRpOMnhuQckNlampvIrKilJi@autorack.proxy.rlwy.net:42085/railway"
+    )
 }
 # Cloudinary settings for media files in production
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME'),
-    'API_KEY': env('CLOUDINARY_API_KEY'),
-    'API_SECRET': env('CLOUDINARY_API_SECRET'),
+    'CLOUD_NAME': 'dgbbjnvp7',
+    'API_KEY': '153942431273933',
+    'API_SECRET': 'uFzjy6KXyGvnEJ7dCx83GWmpUW4',
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 

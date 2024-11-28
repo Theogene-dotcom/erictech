@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-3&8v^%v-efws#+@7=dlq3^pm6g651pfug#pdvw3255nc0$44dg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG',default=True)
 
-ALLOWED_HOSTS = ['erictech-production.up.railway.app','www.erictech-production.up.railway.app','127.0.0.1','localhost'] 
+ALLOWED_HOSTS = ['erictech-production.up.railway.app','www.erictech-production.up.railway.app','127.0.0.1','localhost','kigalibusiness.com','www.kigalibusiness.com'] 
 
 CSRF_TRUSTED_ORIGINS = [
     'https://erictech-production.up.railway.app',

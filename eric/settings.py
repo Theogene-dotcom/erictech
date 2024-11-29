@@ -55,6 +55,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'eric.middleware.RedirectNonWWWToWWW',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -65,7 +66,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'eric.urls'
-
+SITE_DOMAIN = 'erictechrwanda.com'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
